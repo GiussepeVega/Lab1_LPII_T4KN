@@ -1,0 +1,14 @@
+package View;
+
+import Controller.EmpleadoController;
+
+public class EmpleadoView {
+
+	public static void main(String[] args) {
+		
+     String empleado = new EmpleadoController().insertarEmpleado("Flores Gamboa", "Henry Daniel", 22, "Masculino", 1300);
+     System.out.println(empleado);
+		
+	}
+
+}

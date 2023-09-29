@@ -1,0 +1,33 @@
+package Controller;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import Models.Empleado;
+
+public class EmpleadoController {
+
+	SessionFactory sessionFac = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Empleado.class).buildSessionFactory();
+	
+	Session session = sessionFac.openSession();
+	
+	
+	public String insertarEmpleado(String apellidos, String nombres, int edad, String sexo, double salario) {
+		
+		try {
+			Empleado empleado = new Empleado(apellidos, nombres, edad, sexo, salario);
+			session.beginTransaction();
+			session.save(empleado);
+			session.getTransaction().commit();
+			
+			
+		} catch (Exception e) {
+			
+		}
+		
+		
+		return "Empleado Creado";
+	}
+	
+}

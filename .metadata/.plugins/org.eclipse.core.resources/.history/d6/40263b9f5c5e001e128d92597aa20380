@@ -1,0 +1,9 @@
+package Controller;
+
+import org.hibernate.SessionFactory;
+
+public class EmpleadoController {
+
+	
+	
+}

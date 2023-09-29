@@ -1,0 +1,9 @@
+package T1.LP2.GiussepeVC;
+
+public class Empleado {
+  
+	private int idEmp;
+	private String apellidos;
+	private String nombres;
+	
+}
